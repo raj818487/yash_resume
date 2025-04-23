@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parmar Yash Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .resume-container {
+        width: 210mm; /* A4 width */
+        height: 297mm; /* A4 height */
+        padding: 20mm;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .resume-container {
+        max-width: 850px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header */
+      h1 {
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #4a90e2;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .header-bar {
+        height: 6px;
+        background: #4a90e2;
+        margin: 20px 0;
+        border-radius: 2px;
+      }
+
+      /* Contact Info */
+      .contact-info {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-info p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #666;
+      }
+
+      .contact-info a {
+        color: #4a90e2;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      /* Section Styling */
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+      }
+
+      .section p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .skills-list li {
+        background-color: #f7f7f7;
+        padding: 8px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      /* Experience Section */
+      .experience-item {
+        margin-bottom: 15px;
+      }
+
+      .experience-item strong {
+        font-size: 18px;
+        color: #4a90e2;
+      }
+
+      .experience-item p {
+        margin: 5px 0;
+        font-size: 16px;
+      }
+
+      /* Button */
+      .download-btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #4a90e2;
+        color: #fff;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .download-btn:hover {
+        background-color: #357ab7;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .resume-container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .section h2 {
+          font-size: 20px;
+        }
+
+        .contact-info p,
+        .section p {
+          font-size: 14px;
+        }
+
+        .skills-list li {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container" id="resume">
+      <h1>Yash Parmar</h1>
+      <div class="header-bar"></div>
+
+      <div class="contact-info">
+        <p>
+          Address: Narshipara, B/H Swaminarayan temple Juno Jivano Marg, Street
+          No 4, Dhrangadhra, Gujarat 363310, India
+        </p>
+        <p>
+          Phone: <a href="tel:+918758220190">8758220190</a> | Email:
+          <a href="mailto:yash482006@gmail.com">yash482006@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Summary</h2>
+        <p>
+          Hardworking and reliable mobile technician with strong expertise in
+          smartphone repair, diagnostics, and component replacement. Skilled in
+          mobile sales with a proven ability to match customers with the right
+          products and accessories. Strong background in customer service,
+          multitasking, and time management. Devoted to delivering fast,
+          high-quality repairs and creating a positive, memorable experience for
+          every customer. Adept at handling customer queries, upselling
+          services, and maintaining inventory accuracy.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Mobile Repairing (Hardware & Software Troubleshooting)</li>
+          <li>Smartphone Diagnostics and Component Replacement</li>
+          <li>Operating System Installation & Updates (Android/iOS)</li>
+          <li>Mobile Accessories Sales & Upselling</li>
+          <li>Effective Customer Communication</li>
+          <li>Data Backup & Recovery</li>
+          <li>Customer Retention & Service Follow-up</li>
+          <li>Inventory Management & Data Entry</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Experience</h2>
+
+        <div class="experience-item">
+          <p>
+            <strong
+              >Phone House (Mobile Repairing and Mobile Accessories
+              Sales)</strong
+            >
+            | 02/2023 to Present
+          </p>
+          <p>- Rajkamal Chowk, Zala Rd, Dhrangadhra, Gujarat 363310, India</p>
+          <p>- Joined on 15/Feb/2023 to Present</p>
+          <p>- Salary: 10,000 INR + incentive</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Education and Training</h2>
+
+        <div class="education-item">
+          <p><strong>10 Standard (SSC)</strong></p>
+          <p>Chanakya Vidhaya Sankul | 2020 to 2021</p>
+        </div>
+
+        <div class="education-item">
+          <p><strong>Mobile Repairing Course</strong></p>
+          <p>
+            Mobile Repairing (Hardware + Software & OCA), Ahmedabad | 1/Jan/2023
+            to 1/Feb/2023
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Languages</h2>
+        <ul class="skills-list">
+          <li>Gujarati – Speak, Read, and Write</li>
+          <li>Hindi – Speak, Read, and Write</li>
+          <li>English – Read, Write</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="download-btn" onclick="downloadPDF()">
+      Download as PDF
+    </button>
+
+    <button class="download-btn" onclick="downloadJPEG()">
+      Download as JPEG
+    </button>
+
+    <script>
+      async function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF("portrait", "mm", "a4"); // Create A4 PDF
+
+        const resume = document.getElementById("resume");
+        const canvas = await html2canvas(resume, {
+          scale: 2, // Scale the canvas for better resolution
+        });
+
+        const imgData = canvas.toDataURL("image/png");
+        const imgWidth = 210; // A4 width in mm
+        const pageHeight = 297; // A4 height in mm
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        let position = 0;
+
+        // Add image to PDF
+        pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+
+        // Save the PDF
+        pdf.save("yash_resume.pdf");
+      }
+
+      async function downloadJPEG() {
+        const resume = document.getElementById("resume");
+        const canvas = await html2canvas(resume, {
+          scale: 2, // Scale for better image quality
+        });
+
+        const imgData = canvas.toDataURL("image/jpeg", 1.0); // Generate high-quality JPEG
+
+        // Create a link element to download the image
+        const link = document.createElement("a");
+        link.href = imgData;
+        link.download = "resume.jpeg";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Clean up
+      }
+    </script>
+  </body>
+</html>
